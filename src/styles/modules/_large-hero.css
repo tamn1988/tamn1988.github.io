@@ -1,0 +1,82 @@
+.large-hero{
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+    height: 100vh;
+    background: 
+        linear-gradient(
+            140deg,
+            $mainColor 25%, #6c6b6b 50%, $mainColor 75%
+        );
+
+        h1{
+            display: inline;
+        }
+
+        &__animation-wrapper{
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            vertical-align: center;
+            animation: flash 6s infinite;
+            /* keyframes are under _animation.css */
+        }
+
+        &__animated-title__wrapper{
+            display: inline-block;
+            overflow: hidden;
+            white-space:nowrap;
+            vertical-align: bottom;
+        }
+
+        &__animated-title{
+            animation: slideIn 6s infinite;
+             /* keyframes are under _animation.css */
+        }
+
+        &__animated-subtitle{
+            animation: reveal 6s infinite;
+             /* keyframes are under _animation.css */
+        }
+
+        &__animated-title--red{
+            color: $altRed;
+        }
+
+        &__button{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 19px;
+            max-width: 200px;
+            font-size: 1rem;
+            font-weight: 300;
+            border: 2px solid #fff;
+            border-radius: 2px;
+            margin-top: 75px;
+            background-color: rgba(0,0,0,0);
+            transition: all .2s linear;
+
+            @include atSmall{
+                font-size: 1.1rem;
+            }
+
+            @include atMedium{
+                font-size: 1.2rem;
+            }
+
+            @include atLarge{
+                font-size: 1.4rem;
+            }
+
+
+        }
+
+        &__button:hover{
+            background-color: $altGreen;
+            border: 2px solid $altGreen;
+        }
+
+}

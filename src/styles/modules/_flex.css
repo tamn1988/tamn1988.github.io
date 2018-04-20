@@ -1,0 +1,75 @@
+.flex {
+    display: flex;
+    flex-direction: column;
+
+    @include atMedium{
+        overflow: hidden;
+    }
+
+    &--row-at-medium{
+        @include atMedium{
+            flex-direction: row;
+        }
+    }
+
+    &--overflow-reset{
+        overflow: unset;
+    }
+
+
+
+    &--full-vh{
+        height: 100vh;
+    }
+
+    &--no-wrap-at-medium{
+        flex-wrap: wrap;
+
+        @include atMedium{
+            flex-wrap: nowrap;
+        }
+    }
+
+    &--row{
+        flex-direction: row;
+    }
+
+    &--col-reverse{
+        flex-direction: column-reverse;
+    }
+
+
+    &--wrap{
+        flex-wrap: wrap;
+    }
+
+    &--justify-center{
+        justify-content: center;
+    }
+
+    &--aligni-center{
+        align-items: center;
+    }
+
+    &--aligni-start{
+        align-items: flex-start;
+    }
+
+    &--justify-space-around{
+        justify-content: space-around;
+    }
+
+    &--justify-space-between{
+        justify-content: space-between;
+    }
+
+    &--padding-bottom{
+        padding-bottom: 2rem;
+
+        @include atMedium{
+            padding-bottom: 6rem;
+        }
+    }
+
+
+}
